@@ -1,0 +1,133 @@
+<div class="container-fluid" style="min-height: calc(100vh -118px);">
+  <ngx-spinner
+    bdOpacity="0.9"
+    bdColor="rgba(255,255,255,0.85)"
+    size="medium"
+    color="#cb2d3e"
+    type="ball-clip-rotate"
+    [fullScreen]="false"
+  >
+  </ngx-spinner>
+  <div class="row" *ngFor="let review of list">
+    <div class="col-lg-12 col-md-12 col-sm-12 header_resto">
+      <h3>{{ review?.name }}</h3>
+      <p>
+        {{ review?.location?.locality }}
+        <br />
+        {{ review?.cuisines }}
+      </p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 image_height ">
+      <img class="feature_image" src="{{ review.featured_image }}" />
+    </div>
+
+    <div class="container">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#nav-home"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+            >Summary</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-profile-tab"
+            data-toggle="tab"
+            href="#nav-profile"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+            >Reviews</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          <div class="row content_box">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <h5>Cuisines</h5>
+              <p style="color: crimson !important;font-style: italic;">
+                {{ review?.cuisines }}
+              </p>
+              <br />
+              <h5>Ratings</h5>
+              <p>
+                <img
+                  class="star"
+                  src="https://img.icons8.com/emoji/26/000000/star-emoji.png"
+                />
+                {{ review?.user_rating?.aggregate_rating }} <br />
+                <img
+                  class="smile"
+                  src="https://img.icons8.com/ios-glyphs/26/000000/happy.png"
+                />{{ review?.user_rating?.rating_text }}<br />
+                <img
+                  src="https://img.icons8.com/windows/26/000000/thumb-up.png"
+                />
+                {{ review?.user_rating?.votes }} votes
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <h5>Address</h5>
+              <p>
+                {{ review?.location?.address }} <br />{{
+                  review?.location?.city
+                }}
+                <br />Landmark: {{ review?.location?.locality }}
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <h5>Average Cost</h5>
+              <p>
+                {{ review?.currency }} {{ review?.average_cost_for_two }} for
+                two people (approx.)
+              </p>
+              <p>Exclusive of applicable taxes and charges, if any</p>
+
+              <p>Cash and Cards accepted</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <div class="row content_box">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <h5>Reviews ({{ review?.reviews_count }})</h5>
+              <div class="card" *ngFor="let userreview of review.user_reviews">
+                <div class="card-body">
+                  <div class="example-header-image">
+                    <img src="https://img.icons8.com/ios/50/000000/name.png" />
+                  </div>
+                  <h5 class="card-title">
+                    {{ userreview?.review?.user?.name }}
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    {{ userreview?.review?.user?.foodie_level }}<br />{{
+                      userreview?.review?.review_time_friendly
+                    }}
+                  </h6>
+                </div>
+
+                <p class="card-text">{{ userreview?.review?.review_text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

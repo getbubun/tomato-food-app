@@ -1,0 +1,34 @@
+.navbar {
+  font-family: "Roboto";
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 2em;
+  font-style: italic;
+}
+
+nav {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  background: #cb2d3e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+  background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+nav button {
+  border: none;
+}
+
+#sticky-footer {
+  width: 100%;
+  padding: 10px 0px;
+  background: #cb2d3e;
+  background: -webkit-linear-gradient(to right #ef473a, #cb2d3e);
+  background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+#sticky-footer a {
+  text-decoration: none;
+  color: bisque;
+  font-size: 16px;
+}

@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  font-family: "Roboto";
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.input-group > .form-control:not(:last-child) {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  height: 55px;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  /* height: 300%; */
+  overflow-y: hidden;
+  background-color: beige;
+  padding: 10px 0px 10px 10px;
+  left: 0;
+  top: 50px;
+}
+.ng-input > input {
+  height: 40px !important;
+}
+.ng-placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.ng-select .ng-select-container::after {
+  border-bottom: none;
+}
+
+.ng-select.ng-select-focused
+  .ng-select-container
+  .ng-value-container
+  .ng-placeholder,
+.ng-select.ng-select-focused .ng-select-container .ng-arrow-wrapper .ng-arrow {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-arrow-wrapper {
+  bottom: -8px;
+  font-weight: 700;
+}
+.ng-select .ng-clear-wrapper {
+  top: 8px;
+}
+
+.ng-select-single .ng-select-container .ng-value-container .ng-value {
+  color: black;
+  font-weight: 600;
+  padding: 0.47em;
+}
+div .ng-option :hover {
+  color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .ng-dropdown-panel.ng-select-bottom {
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .ng-dropdown-panel.ng-select-bottom {
+    width: 150%;
+  }
+}

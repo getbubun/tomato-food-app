@@ -1,0 +1,126 @@
+<div class="container-fluid" id="container">
+  <div class=" row centerrow">
+    <div class="header ">
+      <h3>Find the best restaurants, cafes and bars in your town</h3>
+    </div>
+    <div class="input-group">
+      <ng-select
+        [items]="cities"
+        bindLabel="name"
+        bindValue="name"
+        id="search"
+        class="form-control spacing"
+        placeholder="Select city"
+        [clearable]="true"
+        [(ngModel)]="selectedCityName"
+        [closeOnSelect]="true"
+        dropdownPosition="auto"
+        (change)="goToDashboard($event, (cityName = selectedCityName))"
+      >
+      </ng-select
+      >&nbsp;
+
+      <ng-select
+        [items]="searchRestoList"
+        bindLabel="restaurant.name"
+        bindValue="restaurant.id"
+        id="search"
+        class="form-control spacing"
+        placeholder="Select Restaurant"
+        [clearable]="true"
+        [(ngModel)]="selectedRestoName"
+        [closeOnSelect]="true"
+        dropdownPosition="auto"
+      >
+      </ng-select
+      >&nbsp;
+
+      <span class="input-group-btn">
+        <input
+          type="button"
+          name="commit"
+          value="Search"
+          class="btn btn-primary searchspace"
+          data-disable-with="Search"
+          (click)="goToDetail($event, (restoName = selectedRestoName))"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="retroList">
+  <ngx-spinner
+    bdOpacity="0.9"
+    bdColor="rgba(255,255,255,0.85)"
+    size="medium"
+    color="#cb2d3e"
+    type="ball-clip-rotate"
+    [fullScreen]="false"
+  >
+  </ngx-spinner>
+  <div class="row text-center">
+    <div
+      class="col-md-12 col-lg-12 col-sm-12 collections"
+      style="padding-top:30px"
+    >
+      <h3>List of Trending Restaurants</h3>
+      <p>{{ collection?.description }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-6" *ngFor="let resto of restoList">
+      <a [routerLink]="['/detail', resto.restaurant.id]">
+        <div class="card mx-auto" style="width: 20rem;">
+          <img
+            class="card-img-top img-fluid"
+            style="height:25vh; width:100%"
+            src="{{ resto.restaurant.featured_image }}"
+            alt="{{ resto.restaurant.name }}"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              {{ resto?.restaurant?.name }}
+            </h5>
+            <div class="card-text">
+              <div class="head">
+                <div class="heading text-center">
+                  <span
+                    *ngIf="resto.restaurant.cuisines"
+                    style="color:red; font-style: italic"
+                  >
+                    {{ resto?.restaurant?.cuisines }}</span
+                  >
+                </div>
+              </div>
+              <div class="heading text-center">
+                Avg. Cost for two people
+                <span style=" font-weight: 600;"
+                  >₹{{ resto?.restaurant.average_cost_for_two }}</span
+                >
+              </div>
+              <div class="content">
+                <span class="rating"
+                  >{{ resto?.restaurant.user_rating.aggregate_rating }}
+                  <img
+                    class="star"
+                    src="https://img.icons8.com/emoji/48/000000/star-emoji.png"
+                  />
+                </span>
+
+                <span class="review"
+                  >{{ resto?.restaurant.user_rating.rating_text }}
+                  <img
+                    class="smile"
+                    src="https://img.icons8.com/ios-glyphs/26/000000/happy.png"
+                /></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

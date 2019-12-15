@@ -1,0 +1,63 @@
+.food-home {
+    height: calc(100vh - 118px);
+    width: 100%;
+    font-family: "Roboto";
+    background-image: url("../../assets/zomato.png");
+    background-size: cover;
+  }
+  .food-home::after {
+    content: "";
+    position: absolute;
+    top: 74px;
+    left: 0;
+    height: calc(100vh - 118px);
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    /* box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000; */
+  }
+  
+  .header {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Kalam", cursive;
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    text-align: center;
+    padding-top: 3.5em;
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  
+  .centerrow {
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+    margin-top: 3em;
+  }
+  
+  .searchspace {
+    border-radius: 5px;
+    background: #cb2d3e;
+    background: -webkit-linear-gradient(to left, #ef473a, #cb2d3e);
+    background: linear-gradient(to left, #ef473a, #cb2d3e);
+    border: none;
+    padding: 15px 45px;
+  }
+  
+  .input-group {
+    width: 100%;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 560px) {
+    .centerrow {
+      width: 100%;
+      padding: 1em;
+    }
+  }
+  

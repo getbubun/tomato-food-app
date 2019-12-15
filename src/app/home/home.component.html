@@ -1,0 +1,39 @@
+<div class="food-home">
+  <div class="container-fluid">
+    <div class="header">
+      <h2 class="text-center">
+        Find the best restaurants, cafes and bars in your town
+      </h2>
+    </div>
+
+    <div class="row centerrow">
+      <div class="input-group" style="z-index: 2;">
+        <ng-select
+          [items]="cities"
+          bindLabel="name"
+          bindValue="name"
+          id="search"
+          class="form-control spacing"
+          placeholder=""
+          [clearable]="true"
+          [(ngModel)]="selectedCityName"
+          [closeOnSelect]="true"
+          dropdownPosition="auto"
+        >
+        </ng-select
+        >&nbsp;
+
+        <span class="input-group-btn">
+          <input
+            type="button"
+            name="commit"
+            value="Search"
+            class="btn btn-primary searchspace"
+            data-disable-with="Search"
+            (click)="goToDashboard($event, (cityName = selectedCityName))"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

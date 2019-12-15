@@ -1,0 +1,35 @@
+
+
+  
+  .button {
+    color: #ffffff;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #cb202d;
+    padding: 0.5em;
+    border-radius: 3px;
+    float: left;
+    margin: 6em 0 0 -155px;
+    left: 50%;
+    position: relative;
+    transition: all 0.3s linear;
+  }
+  
+  p {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 10em;
+    font-weight: 100;
+  }
+  div {
+    padding: 2em;
+  }
+  

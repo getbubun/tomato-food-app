@@ -1,0 +1,53 @@
+.row {
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+  }
+  
+  .header_resto {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  
+  .image_height {
+    max-width: 70%;
+    margin: 0 auto;
+    max-height: 350px;
+  }
+  
+  .feature_image {
+    width: 100%;
+    background: url("../../assets/feature.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .tab-content {
+    /* padding: 2em; */
+    margin-top: 2em;
+  }
+  .container {
+    padding-top: 3em;
+  }
+  
+  .card-text {
+    padding: 0em 1.25em 0.5em 1.25em;
+  }
+  
+  .container-fluid {
+    font-family: "Roboto";
+  }
+  .card {
+    margin-bottom: 0.5em;
+    border: none;
+    box-shadow: 0 3px 16px #0000000f;
+  }
+  h5,
+  h3 {
+    color: #33373d;
+    font-weight: 600;
+  }
+  p {
+    color: #89959b !important;
+  }
+  

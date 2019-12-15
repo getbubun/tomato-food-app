@@ -1,0 +1,140 @@
+div {
+  font-family: "Roboto";
+}
+a:link {
+  text-decoration: none;
+  text-rendering: optimizeSpeed;
+  color: rgb(41, 47, 56);
+}
+.card-title {
+  font-size: 1.5em;
+  color: black;
+}
+
+.heading {
+  font-size: 0.8rem;
+}
+
+.card {
+  margin: 8%;
+  border-radius: 5px;
+  box-shadow: 0 3px 16px #0000000f;
+  border: none;
+  border-radius: 8px;
+  -webkit-transition: 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+.content .star {
+  width: 1.5em;
+  float: left;
+}
+
+.content.smile {
+  width: 1.5em;
+}
+
+.rating {
+  margin-left: 5px;
+}
+.review {
+  float: right;
+}
+.content {
+  width: 90%;
+  padding: 1em;
+  font-size: 0.9rem;
+}
+.centerrow {
+  margin: 0 auto;
+  width: 80%;
+  height: 90%;
+}
+#container {
+  background-image: url("../../assets/zomato.png");
+  width: 100%;
+  background-size: cover;
+  padding: 35px;
+}
+.container-fluid {
+  width: 100%;
+}
+
+.spacing {
+  height: 35%;
+  background: rgb(255, 255, 255);
+  border: none;
+  color: rgb(58, 56, 56);
+  border-radius: 5px;
+}
+
+.searchspace {
+  border-radius: 5px;
+  background: #cb2d3e;
+  background: -webkit-linear-gradient(to left, #ef473a, #cb2d3e);
+  background: linear-gradient(to left, #ef473a, #cb2d3e);
+  border: none;
+  padding: 16px 30px;
+}
+
+.searchspace:focus {
+  box-shadow: none;
+  background: black;
+}
+
+.searchspace:active {
+  transition: all 0.8s;
+  background: grey;
+}
+
+::placeholder {
+  color: rgb(58, 56, 56);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(58, 56, 56);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(58, 56, 56);
+}
+
+.form-control:focus {
+  border: 1px solid white;
+  box-shadow: none;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 25%;
+  padding-bottom: 1em;
+  font-weight: 700;
+  font-size: 3.5rem;
+  font-family: "Kalam", cursive;
+}
+#retroList {
+  min-height: 450px;
+}
+
+@media screen and (max-width: 560px) {
+  #container {
+    padding: 15px;
+  }
+  .centerrow {
+    width: 95%;
+  }
+  .header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
