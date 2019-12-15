@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
   loading: boolean = false;
   searchRestoList: any = [];
   selectedRestoName: string = "";
+  restoName: string = "";
 
   constructor(
     private foodservice: ZomatoService,
