@@ -1,6 +1,14 @@
 # TomatoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+The aim of the project is to create Zomato kind of application using Angular. You will be using Zomato’s API as your backend and the frontend application that is to be created by you must have all the features mentioned later. Application UI should be designed by yourself using Bootstrap. You are not allowed to use bootstrap template available on internet. This project was generated with Angular CLI version 7.3.3.
+
+Features of the Application
+
+Home page - On Home page landing you should first detect the user location or asked for enter manual location like city. According to city or location (latitude and longitude) you should show the restaurants in card list format with image and brief details. There should be one search bar. Where user can search the restaurants with location. After clicking on particular restaurant detailed page should be open.
+
+Details View - This view should contain all information like images, menu address with google map and other information related to restaurant. And bottom you should show the restaurant review in proper format like list view.
+
+Error Views - If API is failed or restaurant not found that time you should show appropriate error page with decent design.
 
 ## Development server
 
